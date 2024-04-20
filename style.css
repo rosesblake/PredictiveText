@@ -1,61 +1,63 @@
+/* Reset styles */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-:focus {
+  box-sizing: border-box; /* Box model reset */
 }
 
 body {
   display: flex;
-  justify-content: center; /* Center content horizontally */
-  align-items: center; /* Center content vertically */
-  height: 100vh; /* Set the height of the body to the full viewport height */
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
   background: linear-gradient(
     130deg,
     #ffc745,
     #ff771d
-  ); /* Orange linear gradient background */
-}
-
-input {
+  ); /* Gradient background */
 }
 
 .search-container {
-  width: 20%;
-  background: linear-gradient(135deg, #ffc14f, #ff9831c9);
-  padding: 5px 15px;
-  position: relative; /* Add position relative */
-  border-bottom: 3px solid rgba(255, 42, 10, 0.636);
+  width: 20%; /* Width of the search container */
+  background: linear-gradient(
+    135deg,
+    #ffc74f,
+    #ff9831c9
+  ); /* Gradient background */
+  padding: 0px 15px; /* Padding */
+  position: relative; /* Relative positioning */
+  border-bottom: 3px solid rgba(255, 42, 10, 0.636); /* Bottom border added accross container*/
 }
 
 .search-container input {
-  background: transparent;
-  height: 50px;
+  background: transparent; /* Transparent background */
+  height: 50px; /* Height of input box*/
   border: none;
   outline: none;
-  padding: 10px;
+  padding: 0;
 }
 
 .search-container .suggestions {
+  position: absolute; /* Absolute positioning */
+  top: 100%; /* Below the input */
+  left: 0; /* Aligned with left edge */
+  width: 100%; /* Full width */
+  background: linear-gradient(
+    135deg,
+    #ffc14f,
+    #ff9831c9
+  ); /* Gradient background for suggestions dropdown*/
 }
 
 .has-suggestions {
-  background: rgba(205, 126, 0, 0.518);
+  background: rgba(205, 126, 0, 0.518); /* Background color for hover effect */
 }
 
 ul {
-  list-style: none;
+  list-style: none; /* No list style bullet points*/
 }
 
 ul li {
-  background: transparent;
-  height: 50px;
-  border: none;
-  outline: none;
-  padding: 10px;
-}
-
-ul li:hover {
+  padding: 8px 8px 8px 15px; /*making it symmetrical with input text*/
+  cursor: pointer; /* Pointer cursor for useability */
 }
